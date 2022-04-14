@@ -5,9 +5,10 @@ let text = ""; //VOY A CREAR ESTA VARIABLE Y DEJARLA VACIA PARA LUEGO REASIGNARL
 let ageNum = parseInt(age);
 
 const currentDate = new Date(); //ESTA FUNCION SIRVE PARA OBTENER DE LA FECHA DE HOY
-const year = currentDate.getFullYear() - Number(age); //ESTO SIRVE PARA DEFINIR QUE QUIERO SOLO EL ANO DE LA VARIABLE DE ARRIBA, NO LA FECHA ENTERA
+const year = currentDate.getFullYear() - Number(age);
+const currentYear = currentDate.getFullYear(); //ESTO SIRVE PARA DEFINIR QUE QUIERO SOLO EL ANO DE LA VARIABLE DE ARRIBA, NO LA FECHA ENTERA
 
-function agelog() {
+agelog = () => {
     if (ageNum<=110 && ageNum>=45) {
         text = "Tas viejo amigo.";
     } else if (ageNum<=44 && ageNum>=18) {
@@ -23,7 +24,7 @@ let message = "Bienvenido " + name + ". Hoy tenes " + age + " años." + " Nacist
 
 console.log(message + ' / Todos los anos que vas a vivir hasta el 2100: '); //LLAMAMOS A LA STRING ANTERIORMENTE MENCIONADA PARA QUE ANDE EN LA CONSOLA
 
-for(let i=year; i<=2100; i++) {
+for(let i=currentYear; i<=2100; i++) {
     console.log(i)
 }
 
